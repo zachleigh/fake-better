@@ -1,0 +1,40 @@
+{
+    "name": "zachleigh/laravel-custom-faker",
+    "description": "Easily use custom Faker providers in any Laravel app.",
+    "keywords": ["laravel", "faker", "custom", "copy", "testng"],
+    "homepage": "https://github.com/zachleigh/laravel-custom-faker",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zach Leigh",
+            "email": "zachleigh@fastmail.jp"
+        }
+    ],
+    "require": {
+        
+    },
+    "require-dev": {
+        "laravel/laravel": "~5.6"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "LaravelCustomFaker\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelCustomFaker\\tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelCustomFaker\\ServiceProvider"
+            ]
+        }
+    }
+}

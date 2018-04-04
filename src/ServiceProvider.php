@@ -2,6 +2,7 @@
 
 namespace LaravelCustomFaker;
 
+use LaravelCustomFaker\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider
@@ -13,7 +14,7 @@ class ServiceProvider extends BaseProvider
      */
     public function register()
     {
-        $this->registerCommands();
+        //
     }
 
     /**
@@ -23,18 +24,10 @@ class ServiceProvider extends BaseProvider
      */
     public function boot()
     {
-        //
-    }
-
-    /**
-     * Register Artisan commands.
-     */
-    protected function registerCommands()
-    {
-        $this->app->singleton('command.make.faker-provider', function ($app) {
-            return $app['LaravelPropertyBag\Commands\MakeFakerProvider'];
-        });
-
-        $this->commands('command.make.faker-provider');
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MakeFakerProvider::class,
+            ]);
+        }
     }
 }

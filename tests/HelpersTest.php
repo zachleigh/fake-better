@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelRealCopy\Tests;
+namespace LaravelFakerPlus\Tests;
 
 class HelpersTest extends TestCase
 {

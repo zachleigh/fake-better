@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelRealCopy\Tests\Commands;
+namespace LaravelFakerPlus\Tests\Commands;
 
 use Illuminate\Support\Facades\Artisan;
-use LaravelRealCopy\Tests\TestCase;
+use LaravelFakerPlus\Tests\TestCase;
 
 class MakeFakerProviderTest extends TestCase
 {

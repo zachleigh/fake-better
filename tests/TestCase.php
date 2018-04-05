@@ -50,4 +50,25 @@ abstract class TestCase extends BaseTestCase
 
         $this->assertFileNotExists($path);
     }
+
+    /**
+     * Create a provider using an exmple provider in the data directory.
+     *
+     * @param string $name
+     * @return void
+     */
+    protected function createProvider($name)
+    {
+        $filesystem = new Filesystem();
+
+        $filesystem->makeDirectory(faker_provider_path());
+
+        $data = $filesystem->get(__DIR__ . "/data/{$name}.php");
+
+        $path = faker_provider_path($name . '.php');
+
+        $filesystem->put($path, $data);
+
+        $this->assertFileExists($path);
+    }
 }

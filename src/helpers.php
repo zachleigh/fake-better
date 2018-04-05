@@ -10,7 +10,7 @@ if (!function_exists('faker_provider_path')) {
      */
     function faker_provider_path($path = '')
     {
-        $directory = config('faker-plus.provider-path', database_path('faker-providers'));
+        $directory = config('faker-plus.provider-path', database_path('faker/providers'));
 
         return rtrim($directory, '/') . '/' . ltrim($path, '/');
     }

@@ -28,9 +28,13 @@ class ServiceProvider extends BaseProvider
             $this->commands([
                 MakeFakerProvider::class,
             ]);
+
+            $this->registerFakerProviders();
         }
 
-        $this->registerFakerProviders();
+        $this->publishes([
+            __DIR__ . '/config.php' => config_path('faker-plus.php'),
+        ]);
     }
 
     /**

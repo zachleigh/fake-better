@@ -39,7 +39,7 @@ class MakeFakerProvider extends Command
         }
 
         if (!$filesystem->exists(faker_provider_path())) {
-            $filesystem->makeDirectory(faker_provider_path());
+            $filesystem->makeDirectory(faker_provider_path(), 0755, true);
         }
 
         $contents = $this->getStub();

@@ -16,11 +16,11 @@ class ServiceProviderTest extends TestCase
     {
         $filesystem = new Filesystem();
 
-        $filesystem->makeDirectory(dirname(__DIR__) . '/vendor/laravel/laravel/database/faker-providers/');
+        $filesystem->makeDirectory(dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/');
 
         $filesystem->copy(
             __DIR__ . '/data/DogNames.php',
-            dirname(__DIR__) . '/vendor/laravel/laravel/database/faker-providers/DogNames.php'
+            dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/DogNames.php'
         );
 
         parent::setUp();

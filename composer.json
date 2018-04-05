@@ -1,8 +1,8 @@
 {
-    "name": "zachleigh/laravel-custom-faker",
-    "description": "Easily use custom Faker providers in any Laravel app.",
-    "keywords": ["laravel", "faker", "custom", "copy", "testng"],
-    "homepage": "https://github.com/zachleigh/laravel-custom-faker",
+    "name": "zachleigh/laravel-real-copy",
+    "description": "Use real copy via Faker in any Laravel app.",
+    "keywords": ["laravel", "faker", "real copy", "custom", "copy", "testing"],
+    "homepage": "https://github.com/zachleigh/laravel-real-copy",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -21,7 +21,7 @@
 
     "autoload": {
         "psr-4": {
-            "LaravelCustomFaker\\": "src/"
+            "LaravelRealCopy\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -29,7 +29,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelCustomFaker\\Tests\\": "tests/"
+            "LaravelRealCopy\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
@@ -37,7 +37,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelCustomFaker\\ServiceProvider"
+                "LaravelRealCopy\\ServiceProvider"
             ]
         }
     }

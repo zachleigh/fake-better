@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelCustomFaker\Tests;
+namespace LaravelRealCopy\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use LaravelCustomFaker\ServiceProvider;
+use LaravelRealCopy\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 
 abstract class TestCase extends BaseTestCase

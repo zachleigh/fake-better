@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelCustomFaker;
+namespace LaravelRealCopy;
 
-use LaravelCustomFaker\Commands\MakeFakerProvider;
+use LaravelRealCopy\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelCustomFaker\Commands;
+namespace LaravelRealCopy\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

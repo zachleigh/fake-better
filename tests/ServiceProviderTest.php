@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelCustomFaker\Tests;
+namespace LaravelRealCopy\Tests;
 
 use Illuminate\Filesystem\Filesystem;
 use Faker\Generator;

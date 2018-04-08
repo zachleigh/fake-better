@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelFakerPlus;
+namespace LaravelFakerPlus\Laravel;
 
-use LaravelFakerPlus\Commands\MakeFakerProvider;
+use LaravelFakerPlus\Laravel\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
-use LaravelFakerPlus\Commands\FakerPlusList;
-use LaravelFakerPlus\Commands\FakerPlusImport;
+use LaravelFakerPlus\Laravel\Commands\FakerPlusList;
+use LaravelFakerPlus\Laravel\Commands\FakerPlusImport;
 
 class ServiceProvider extends BaseProvider
 {

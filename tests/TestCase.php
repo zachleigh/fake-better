@@ -4,7 +4,7 @@ namespace LaravelFakerPlus\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use LaravelFakerPlus\ServiceProvider;
+use LaravelFakerPlus\Laravel\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 
 abstract class TestCase extends BaseTestCase

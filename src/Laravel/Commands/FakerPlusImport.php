@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Commands;
+namespace LaravelFakerPlus\Laravel\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -38,6 +38,10 @@ class FakerPlusImport extends Command
 
         $filesystem = new Filesystem();
 
+        if (!file_exists(faker_provider_path())) {
+            $filesystem->makeDirectory(faker_provider_path(), 0755, true);
+        }
+        
         $filesystem->copy($path, faker_provider_path($name . '.php'));
     }
 }

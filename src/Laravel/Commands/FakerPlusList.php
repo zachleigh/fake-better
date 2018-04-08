@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Commands;
+namespace LaravelFakerPlus\Laravel\Commands;
 
 use Faker\Generator;
 use Illuminate\Console\Command;

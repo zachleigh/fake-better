@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Commands;
+namespace LaravelFakerPlus\Laravel\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -52,7 +52,7 @@ class MakeFakerProvider extends Command
      */
     protected function getStub()
     {
-        $stub = file_get_contents(__DIR__.'/../Stubs/ProviderStub.php');
+        $stub = file_get_contents(__DIR__.'/../../Stubs/ProviderStub.php');
 
         return str_replace('{{Name}}', $this->argument('name'), $stub);
     }

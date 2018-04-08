@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Tests\Commands;
+namespace LaravelFakerPlus\Tests\Laravel\Commands;
 
 use Faker\Generator;
 use LaravelFakerPlus\Tests\TestCase;

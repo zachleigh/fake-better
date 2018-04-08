@@ -1,9 +1,10 @@
 <?php
 
-namespace LaravelFakerPlus\Tests;
+namespace LaravelFakerPlus\Tests\Laravel;
 
-use Illuminate\Filesystem\Filesystem;
 use Faker\Generator;
+use LaravelFakerPlus\Tests\TestCase;
+use Illuminate\Filesystem\Filesystem;
 
 class ServiceProviderTest extends TestCase
 {
@@ -16,11 +17,13 @@ class ServiceProviderTest extends TestCase
     {
         $filesystem = new Filesystem();
 
-        $filesystem->makeDirectory(dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/');
+        $filesystem->makeDirectory(
+            dirname(__DIR__) . '/../vendor/laravel/laravel/database/faker/providers/'
+        );
 
         $filesystem->copy(
-            __DIR__ . '/data/DogNames.php',
-            dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/DogNames.php'
+            __DIR__ . '/../data/DogNames.php',
+            dirname(__DIR__) . '/../vendor/laravel/laravel/database/faker/providers/DogNames.php'
         );
 
         parent::setUp();

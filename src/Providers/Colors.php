@@ -4,7 +4,7 @@ namespace LaravelFakerPlus\Providers;
 
 use Faker\Provider\Base;
 
-class Colors extends Base
+class Colors extends FakerPlusProvider
 {
     /**
      * Valid HTML color names.
@@ -159,6 +159,8 @@ class Colors extends Base
         'Yellow',
         'YellowGreen',
     ];
+
+    protected $description = 'Generate colors in various formats.';
 
     /**
      * Return a random HTML color name.

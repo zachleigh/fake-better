@@ -5,6 +5,7 @@ namespace LaravelFakerPlus;
 use LaravelFakerPlus\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 use LaravelFakerPlus\Commands\FakerPlusList;
+use LaravelFakerPlus\Commands\FakerPlusImport;
 
 class ServiceProvider extends BaseProvider
 {
@@ -27,6 +28,7 @@ class ServiceProvider extends BaseProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
+                FakerPlusImport::class,
                 FakerPlusList::class,
                 MakeFakerProvider::class,
             ]);

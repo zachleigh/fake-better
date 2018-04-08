@@ -29,7 +29,7 @@ class FakerPlusList extends Command
      */
     public function handle()
     {
-        $directory = new \DirectoryIterator(__DIR__ . '/../Providers/');
+        $directory = new \DirectoryIterator(local_faker_provider_path());
 
         $generator = new Generator();
 

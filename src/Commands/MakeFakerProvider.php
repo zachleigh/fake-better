@@ -42,9 +42,7 @@ class MakeFakerProvider extends Command
             $filesystem->makeDirectory(faker_provider_path(), 0755, true);
         }
 
-        $contents = $this->getStub();
-
-        $filesystem->put($fullPath, $contents);
+        $filesystem->put($fullPath, $this->getStub());
     }
 
     /**

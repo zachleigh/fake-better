@@ -160,6 +160,11 @@ class Colors extends FakerPlusProvider
         'YellowGreen',
     ];
 
+    /**
+     * Provider description.
+     *
+     * @var string
+     */
     protected $description = 'Generate colors in various formats.';
 
     /**

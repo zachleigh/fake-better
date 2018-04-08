@@ -4,7 +4,6 @@ namespace LaravelFakerPlus\Commands;
 
 use Faker\Generator;
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
 use LaravelFakerPlus\Providers\FakerPlusProvider;
 
 class FakerPlusList extends Command
@@ -61,6 +60,6 @@ class FakerPlusList extends Command
     {
         $reflection = new \ReflectionClass($fullName);
 
-        return $reflection->isSubclassOf('LaravelFakerPlus\\Providers\\FakerPlusProvider');
+        return $reflection->isSubclassOf(FakerPlusProvider::class);
     }
 }

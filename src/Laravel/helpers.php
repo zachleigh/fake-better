@@ -26,7 +26,7 @@ if (!function_exists('local_faker_provider_path')) {
      */
     function local_faker_provider_path($path = '')
     {
-        $directory = __DIR__ . '/Providers';
+        $directory = __DIR__ . '/../Providers';
 
         return rtrim($directory, '/') . '/' . ltrim($path, '/');
     }

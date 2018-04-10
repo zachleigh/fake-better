@@ -24,7 +24,7 @@
             "LaravelFakerPlus\\": "src/"
         },
         "files": [
-            "src/helpers.php"
+            "src/Laravel/helpers.php"
         ]
     },
     "autoload-dev": {

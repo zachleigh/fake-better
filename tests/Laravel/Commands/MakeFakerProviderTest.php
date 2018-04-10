@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelFakerPlus\Tests\Laravel\Commands;
+namespace FakerPlus\Tests\Laravel\Commands;
 
-use LaravelFakerPlus\Tests\TestCase;
-use LaravelFakerPlus\Laravel\Helpers;
+use FakerPlus\Tests\TestCase;
+use FakerPlus\Laravel\Helpers;
 use Illuminate\Support\Facades\Artisan;
 
 class MakeFakerProviderTest extends TestCase

@@ -1,11 +1,10 @@
 <?php
 
-namespace LaravelFakerPlus\Tests\Providers;
+namespace FakerPlus\Tests\Providers;
 
-use LaravelFakerPlus\Providers\Colors;
-use LaravelFakerPlus\Tests\TestCase;
 use Faker\Generator;
-
+use FakerPlus\Tests\TestCase;
+use FakerPlus\Providers\Colors;
 
 class ColorsTest extends TestCase
 {

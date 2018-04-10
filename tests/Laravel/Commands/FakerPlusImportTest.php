@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelFakerPlus\Tests\Laravel\Commands;
+namespace FakerPlus\Tests\Laravel\Commands;
 
 use Faker\Generator;
-use LaravelFakerPlus\Tests\TestCase;
-use LaravelFakerPlus\Laravel\Helpers;
-use LaravelFakerPlus\Providers\Colors;
+use FakerPlus\Tests\TestCase;
+use FakerPlus\Laravel\Helpers;
+use FakerPlus\Providers\Colors;
 use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Output\BufferedOutput;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelFakerPlus\Laravel\Commands;
+namespace FakerPlus\Laravel\Commands;
 
+use FakerPlus\Laravel\Helpers;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use LaravelFakerPlus\Laravel\Helpers;
 
 class MakeFakerProvider extends Command
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Laravel;
+namespace FakerPlus\Laravel;
 
 class Helpers
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelFakerPlus\Providers;
+namespace FakerPlus\Providers;
 
 use Faker\Provider\Base;
 

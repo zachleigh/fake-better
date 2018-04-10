@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelFakerPlus\Laravel\Commands;
+namespace FakerPlus\Laravel\Commands;
 
 use Faker\Generator;
+use FakerPlus\Laravel\Helpers;
 use Illuminate\Console\Command;
-use LaravelFakerPlus\Laravel\Helpers;
-use LaravelFakerPlus\Providers\FakerPlusProvider;
+use FakerPlus\Providers\FakerPlusProvider;
 
 class FakerPlusList extends Command
 {
@@ -41,7 +41,7 @@ class FakerPlusList extends Command
 
             $className = $file->getBasename('.php');
 
-            $fullName = 'LaravelFakerPlus\\Providers\\' . $className;
+            $fullName = 'FakerPlus\\Providers\\' . $className;
 
             if ($this->isFakerPlusProvider($fullName)) {
                 $provider = new $fullName($generator);

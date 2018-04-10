@@ -1,13 +1,12 @@
 <?php
 
-namespace LaravelFakerPlus\Tests;
+namespace FakerPlus\Tests;
 
+use FakerPlus\Laravel\Helpers;
 use Illuminate\Filesystem\Filesystem;
-use LaravelFakerPlus\Laravel\Helpers;
+use FakerPlus\Laravel\ServiceProvider;
 use Illuminate\Contracts\Console\Kernel;
-use LaravelFakerPlus\Laravel\ServiceProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-
 
 abstract class TestCase extends BaseTestCase
 {

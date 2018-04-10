@@ -22,10 +22,7 @@
     "autoload": {
         "psr-4": {
             "LaravelFakerPlus\\": "src/"
-        },
-        "files": [
-            "src/Laravel/helpers.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

@@ -2,6 +2,7 @@
 
 namespace LaravelFakerPlus\Laravel;
 
+use LaravelFakerPlus\Laravel\Helpers;
 use LaravelFakerPlus\Laravel\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 use LaravelFakerPlus\Laravel\Commands\FakerPlusList;
@@ -48,8 +49,8 @@ class ServiceProvider extends BaseProvider
      */
     protected function registerFakerProviders()
     {
-        if (file_exists(faker_provider_path())) {
-            $directory = new \DirectoryIterator(faker_provider_path());
+        if (file_exists(Helpers::projectProviderPath())) {
+            $directory = new \DirectoryIterator(Helpers::projectProviderPath());
 
             $faker = app()->get(\Faker\Generator::class);
 

@@ -4,6 +4,7 @@ namespace LaravelFakerPlus\Laravel\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use LaravelFakerPlus\Laravel\Helpers;
 
 class MakeFakerProvider extends Command
 {
@@ -28,7 +29,7 @@ class MakeFakerProvider extends Command
      */
     public function handle()
     {
-        $fullPath = faker_provider_path($this->argument('name') . '.php');
+        $fullPath = Helpers::projectProviderPath($this->argument('name') . '.php');
 
         $filesystem = new Filesystem();
 
@@ -38,8 +39,8 @@ class MakeFakerProvider extends Command
             return;
         }
 
-        if (!$filesystem->exists(faker_provider_path())) {
-            $filesystem->makeDirectory(faker_provider_path(), 0755, true);
+        if (!$filesystem->exists(Helpers::projectProviderPath())) {
+            $filesystem->makeDirectory(Helpers::projectProviderPath(), 0755, true);
         }
 
         $filesystem->put($fullPath, $this->getStub());

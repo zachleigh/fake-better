@@ -2,6 +2,8 @@
 
 namespace LaravelFakerPlus\Tests;
 
+use LaravelFakerPlus\Laravel\Helpers;
+
 class HelpersTest extends TestCase
 {
     /**
@@ -11,7 +13,7 @@ class HelpersTest extends TestCase
     {
         $this->assertEquals(
             dirname(__DIR__).'/vendor/laravel/laravel/database/faker/providers/',
-            faker_provider_path()
+            Helpers::projectProviderPath()
         );
     }
 
@@ -22,7 +24,7 @@ class HelpersTest extends TestCase
     {
         $this->assertEquals(
             dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/Test.php',
-            faker_provider_path('Test.php')
+            Helpers::projectProviderPath('Test.php')
         );
     }
 }

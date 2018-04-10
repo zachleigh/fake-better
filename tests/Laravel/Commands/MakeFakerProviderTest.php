@@ -2,8 +2,9 @@
 
 namespace LaravelFakerPlus\Tests\Laravel\Commands;
 
-use Illuminate\Support\Facades\Artisan;
 use LaravelFakerPlus\Tests\TestCase;
+use LaravelFakerPlus\Laravel\Helpers;
+use Illuminate\Support\Facades\Artisan;
 
 class MakeFakerProviderTest extends TestCase
 {
@@ -12,7 +13,7 @@ class MakeFakerProviderTest extends TestCase
      */
     public function makeFakerProviderMakesProvider()
     {
-        $path = faker_provider_path('Test.php');
+        $path = Helpers::projectProviderPath('Test.php');
 
         $this->removeFile($path);
 
@@ -26,6 +27,6 @@ class MakeFakerProviderTest extends TestCase
 
         $this->assertContains('class Test extends Base', $contents);
 
-        $this->removeFile(faker_provider_path());
+        $this->removeFile(Helpers::projectProviderPath());
     }
 }

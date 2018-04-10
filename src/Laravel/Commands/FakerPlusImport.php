@@ -4,6 +4,7 @@ namespace LaravelFakerPlus\Laravel\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use LaravelFakerPlus\Laravel\Helpers;
 
 class FakerPlusImport extends Command
 {
@@ -30,7 +31,7 @@ class FakerPlusImport extends Command
     {
         $name = $this->argument('name');
 
-        $path = local_faker_provider_path($name . '.php');
+        $path = Helpers::localProviderPath($name . '.php');
 
         if (!file_exists($path)) {
             throw new \Exception("Provider with name {$name} not found.");
@@ -38,10 +39,10 @@ class FakerPlusImport extends Command
 
         $filesystem = new Filesystem();
 
-        if (!file_exists(faker_provider_path())) {
-            $filesystem->makeDirectory(faker_provider_path(), 0755, true);
+        if (!file_exists(Helpers::projectProviderPath())) {
+            $filesystem->makeDirectory(Helpers::projectProviderPath(), 0755, true);
         }
         
-        $filesystem->copy($path, faker_provider_path($name . '.php'));
+        $filesystem->copy($path, Helpers::projectProviderPath($name . '.php'));
     }
 }

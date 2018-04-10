@@ -4,6 +4,7 @@ namespace LaravelFakerPlus\Tests\Laravel\Commands;
 
 use Faker\Generator;
 use LaravelFakerPlus\Tests\TestCase;
+use LaravelFakerPlus\Laravel\Helpers;
 use LaravelFakerPlus\Providers\Colors;
 use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Output\BufferedOutput;
@@ -15,7 +16,7 @@ class FakerPlusImportTest extends TestCase
      */
     public function fakerPlusImportyImportsProvidersIntoProject()
     {
-        $path = faker_provider_path('Colors.php');
+        $path = Helpers::projectProviderPath('Colors.php');
 
         $this->removeFile($path);
 
@@ -29,6 +30,6 @@ class FakerPlusImportTest extends TestCase
 
         $this->assertContains('class Colors extends FakerPlusProvider', $contents);
 
-        $this->removeFile(faker_provider_path());
+        $this->removeFile(Helpers::projectProviderPath());
     }
 }

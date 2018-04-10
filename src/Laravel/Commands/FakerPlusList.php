@@ -4,6 +4,7 @@ namespace LaravelFakerPlus\Laravel\Commands;
 
 use Faker\Generator;
 use Illuminate\Console\Command;
+use LaravelFakerPlus\Laravel\Helpers;
 use LaravelFakerPlus\Providers\FakerPlusProvider;
 
 class FakerPlusList extends Command
@@ -29,7 +30,7 @@ class FakerPlusList extends Command
      */
     public function handle()
     {
-        $directory = new \DirectoryIterator(local_faker_provider_path());
+        $directory = new \DirectoryIterator(Helpers::localProviderPath());
 
         $generator = new Generator();
 

@@ -2,10 +2,12 @@
 
 namespace LaravelFakerPlus\Tests;
 
-use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-use LaravelFakerPlus\Laravel\ServiceProvider;
 use Illuminate\Filesystem\Filesystem;
+use LaravelFakerPlus\Laravel\Helpers;
+use Illuminate\Contracts\Console\Kernel;
+use LaravelFakerPlus\Laravel\ServiceProvider;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+
 
 abstract class TestCase extends BaseTestCase
 {
@@ -61,11 +63,11 @@ abstract class TestCase extends BaseTestCase
     {
         $filesystem = new Filesystem();
 
-        $filesystem->makeDirectory(faker_provider_path());
+        $filesystem->makeDirectory(Helpers::projectProviderPath());
 
         $data = $filesystem->get(__DIR__ . "/data/{$name}.php");
 
-        $path = faker_provider_path($name . '.php');
+        $path = Helpers::projectProviderPath($name . '.php');
 
         $filesystem->put($path, $data);
 

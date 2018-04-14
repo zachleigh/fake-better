@@ -1,8 +1,8 @@
 <?php
 
-namespace FakerPlus\Providers;
+namespace FakerPlus\Providers\Library;
 
-use Faker\Provider\Base;
+use FakerPlus\Providers\FakerPlusProvider;
 
 class Colors extends FakerPlusProvider
 {

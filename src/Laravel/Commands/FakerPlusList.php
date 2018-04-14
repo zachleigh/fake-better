@@ -41,7 +41,7 @@ class FakerPlusList extends Command
 
             $className = $file->getBasename('.php');
 
-            $fullName = 'FakerPlus\\Providers\\' . $className;
+            $fullName = 'FakerPlus\\Providers\\Library\\' . $className;
 
             if ($this->isFakerPlusProvider($fullName)) {
                 $provider = new $fullName($generator);

@@ -2,6 +2,8 @@
 
 namespace FakerPlus\Laravel;
 
+use Faker\Generator;
+use FakerPlus\Providers\Copy;
 use FakerPlus\Laravel\Helpers;
 use FakerPlus\Laravel\Commands\FakerPlusList;
 use FakerPlus\Laravel\Commands\FakerPlusImport;
@@ -49,10 +51,39 @@ class ServiceProvider extends BaseProvider
      */
     protected function registerFakerProviders()
     {
+        $faker = app()->get(Generator::class);
+
+        $this->registerCopyProvider($faker)
+            ->registerUserProviders($faker);
+    }
+
+    /**
+     * Register the copy provier.
+     *
+     * @param Generator $faker
+     * @return static
+     */
+    protected function registerCopyProvider(Generator $faker)
+    {
+        $copyProvider = new Copy($faker);
+
+        $copyProvider->setCopyPath(Helpers::projectCopyPath());
+
+        $faker->addProvider($copyProvider);
+
+        return $this;
+    }
+
+    /**
+     * Register user providers.
+     *
+     * @param Generator $faker
+     * @return static
+     */
+    protected function registerUserProviders(Generator $faker)
+    {
         if (file_exists(Helpers::projectProviderPath())) {
             $directory = new \DirectoryIterator(Helpers::projectProviderPath());
-
-            $faker = app()->get(\Faker\Generator::class);
 
             foreach ($directory as $file) {
                 if ($file->isDot()) {
@@ -68,5 +99,7 @@ class ServiceProvider extends BaseProvider
                 }
             }
         }
+
+        return $this;
     }
 }

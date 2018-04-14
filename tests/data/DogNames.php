@@ -1,6 +1,8 @@
 <?php
 
-class DogNames extends \Faker\Provider\Base
+use FakerPlus\Providers\FakerPlusProvider;
+
+class DogNames extends FakerPlusProvider
 {
     public function maleDogName()
     {

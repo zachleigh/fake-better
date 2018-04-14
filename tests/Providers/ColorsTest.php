@@ -4,7 +4,7 @@ namespace FakerPlus\Tests\Providers;
 
 use Faker\Generator;
 use FakerPlus\Tests\TestCase;
-use FakerPlus\Providers\Colors;
+use FakerPlus\Providers\Library\Colors;
 
 class ColorsTest extends TestCase
 {

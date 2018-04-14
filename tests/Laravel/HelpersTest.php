@@ -1,7 +1,8 @@
 <?php
 
-namespace FakerPlus\Tests;
+namespace FakerPlus\Tests\Laravel;
 
+use FakerPlus\Tests\TestCase;
 use FakerPlus\Laravel\Helpers;
 
 class HelpersTest extends TestCase
@@ -12,7 +13,7 @@ class HelpersTest extends TestCase
     public function fakerProviderPathReturnsPath()
     {
         $this->assertEquals(
-            dirname(__DIR__).'/vendor/laravel/laravel/database/faker/providers/',
+            dirname(__DIR__, 2).'/vendor/laravel/laravel/database/faker/providers/',
             Helpers::projectProviderPath()
         );
     }
@@ -23,7 +24,7 @@ class HelpersTest extends TestCase
     public function fakerProviderPathReturnsPathWithAppendedFile()
     {
         $this->assertEquals(
-            dirname(__DIR__) . '/vendor/laravel/laravel/database/faker/providers/Test.php',
+            dirname(__DIR__, 2).'/vendor/laravel/laravel/database/faker/providers/Test.php',
             Helpers::projectProviderPath('Test.php')
         );
     }

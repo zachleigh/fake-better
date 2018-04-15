@@ -29,7 +29,7 @@ class CopyTest extends TestCase
         $filesystem = new Filesystem();
 
         if (!$filesystem->exists(Helpers::projectCopyPath('blog/body'))) {
-            $filesystem->makeDirectory(Helpers::projectCopyPath('blog/body'));
+            $filesystem->makeDirectory(Helpers::projectCopyPath('blog/body'), 0755, true);
         }
 
         $filesystem->copy(__DIR__ . '/../data/blog-body-1.php', Helpers::projectCopyPath('blog/body/one.php'));

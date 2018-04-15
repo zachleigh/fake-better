@@ -9,6 +9,7 @@ use FakeBetter\Laravel\Commands\FakeBetterList;
 use FakeBetter\Laravel\Commands\FakeBetterImport;
 use FakeBetter\Laravel\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
+use FakeBetter\Laravel\Commands\MakeFakerCopy;
 
 class ServiceProvider extends BaseProvider
 {
@@ -33,6 +34,7 @@ class ServiceProvider extends BaseProvider
             $this->commands([
                 // FakeBetterImport::class,
                 // FakeBetterList::class,
+                MakeFakerCopy::class,
                 MakeFakerProvider::class,
             ]);
 

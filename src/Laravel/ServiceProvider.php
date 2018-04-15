@@ -31,8 +31,8 @@ class ServiceProvider extends BaseProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                FakeBetterImport::class,
-                FakeBetterList::class,
+                // FakeBetterImport::class,
+                // FakeBetterList::class,
                 MakeFakerProvider::class,
             ]);
 

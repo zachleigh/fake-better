@@ -1,12 +1,12 @@
 <?php
 
-namespace FakerPlus\Tests\Providers;
+namespace FakeBetter\Tests\Providers;
 
 use Faker\Generator;
-use FakerPlus\Tests\TestCase;
-use FakerPlus\Providers\Copy;
+use FakeBetter\Tests\TestCase;
+use FakeBetter\Providers\Copy;
 use Illuminate\Filesystem\Filesystem;
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Laravel\Helpers;
 
 class CopyTest extends TestCase
 {

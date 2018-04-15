@@ -1,20 +1,20 @@
 <?php
 
-namespace FakerPlus\Tests\Laravel\Commands;
+namespace FakeBetter\Tests\Laravel\Commands;
 
 use Faker\Generator;
-use FakerPlus\Tests\TestCase;
-use FakerPlus\Laravel\Helpers;
-use FakerPlus\Providers\Colors;
+use FakeBetter\Tests\TestCase;
+use FakeBetter\Laravel\Helpers;
+use FakeBetter\Providers\Colors;
 use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Output\BufferedOutput;
 
-class FakerPlusImportTest extends TestCase
+class FakeBetterImportTest extends TestCase
 {
     /**
      * @test
      */
-    public function fakerPlusImportyImportsProvidersIntoProject()
+    public function FakeBetterImportyImportsProvidersIntoProject()
     {
         $path = Helpers::projectProviderPath('Colors.php');
 
@@ -28,7 +28,7 @@ class FakerPlusImportTest extends TestCase
 
         $contents = file_get_contents($path);
 
-        $this->assertContains('class Colors extends FakerPlusProvider', $contents);
+        $this->assertContains('class Colors extends FakeBetterProvider', $contents);
 
         $this->removeFile(Helpers::projectProviderPath());
     }

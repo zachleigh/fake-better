@@ -1,10 +1,10 @@
 <?php
 
-namespace FakerPlus\Tests;
+namespace FakeBetter\Tests;
 
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Laravel\Helpers;
 use Illuminate\Filesystem\Filesystem;
-use FakerPlus\Laravel\ServiceProvider;
+use FakeBetter\Laravel\ServiceProvider;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace FakerPlus\Tests\Laravel;
+namespace FakeBetter\Tests\Laravel;
 
 use Faker\Generator;
-use FakerPlus\Tests\TestCase;
+use FakeBetter\Tests\TestCase;
 use Illuminate\Filesystem\Filesystem;
 
 class ServiceProviderTest extends TestCase

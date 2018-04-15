@@ -1,6 +1,6 @@
 <?php
 
-namespace FakerPlus\Laravel;
+namespace FakeBetter\Laravel;
 
 class Helpers
 {
@@ -13,7 +13,7 @@ class Helpers
      */
     public static function projectProviderPath($path = '')
     {
-        $directory = config('faker-plus.provider-path', database_path('faker/providers'));
+        $directory = config('fake-better.provider-path', database_path('faker/providers'));
 
         return rtrim($directory, '/') . '/' . ltrim($path, '/');
     }
@@ -41,7 +41,7 @@ class Helpers
      */
     public static function projectCopyPath($path = '')
     {
-        $directory = config('faker-plus.copy-path', database_path('faker/copy'));
+        $directory = config('fake-better.copy-path', database_path('faker/copy'));
 
         return rtrim($directory, '/') . '/' . ltrim($path, '/');
     }

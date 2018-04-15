@@ -1,9 +1,9 @@
 <?php
 
-namespace FakerPlus\Tests\Laravel;
+namespace FakeBetter\Tests\Laravel;
 
-use FakerPlus\Tests\TestCase;
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Tests\TestCase;
+use FakeBetter\Laravel\Helpers;
 
 class HelpersTest extends TestCase
 {

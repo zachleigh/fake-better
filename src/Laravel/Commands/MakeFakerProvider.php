@@ -1,8 +1,8 @@
 <?php
 
-namespace FakerPlus\Laravel\Commands;
+namespace FakeBetter\Laravel\Commands;
 
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Laravel\Helpers;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 

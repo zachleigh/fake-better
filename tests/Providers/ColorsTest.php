@@ -1,10 +1,10 @@
 <?php
 
-namespace FakerPlus\Tests\Providers;
+namespace FakeBetter\Tests\Providers;
 
 use Faker\Generator;
-use FakerPlus\Tests\TestCase;
-use FakerPlus\Providers\Library\Colors;
+use FakeBetter\Tests\TestCase;
+use FakeBetter\Providers\Library\Colors;
 
 class ColorsTest extends TestCase
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace FakerPlus\Laravel;
+namespace FakeBetter\Laravel;
 
 use Faker\Generator;
-use FakerPlus\Providers\Copy;
-use FakerPlus\Laravel\Helpers;
-use FakerPlus\Laravel\Commands\FakerPlusList;
-use FakerPlus\Laravel\Commands\FakerPlusImport;
-use FakerPlus\Laravel\Commands\MakeFakerProvider;
+use FakeBetter\Providers\Copy;
+use FakeBetter\Laravel\Helpers;
+use FakeBetter\Laravel\Commands\FakeBetterList;
+use FakeBetter\Laravel\Commands\FakeBetterImport;
+use FakeBetter\Laravel\Commands\MakeFakerProvider;
 use Illuminate\Support\ServiceProvider as BaseProvider;
 
 class ServiceProvider extends BaseProvider
@@ -31,8 +31,8 @@ class ServiceProvider extends BaseProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                FakerPlusImport::class,
-                FakerPlusList::class,
+                FakeBetterImport::class,
+                FakeBetterList::class,
                 MakeFakerProvider::class,
             ]);
 

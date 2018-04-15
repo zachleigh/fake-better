@@ -1,11 +1,11 @@
 <?php
 
-namespace FakerPlus\Providers;
+namespace FakeBetter\Providers;
 
-use FakerPlus\Laravel\Helpers;
-use FakerPlus\Providers\FakerPlusProvider;
+use FakeBetter\Laravel\Helpers;
+use FakeBetter\Providers\FakeBetterProvider;
 
-class Copy extends FakerPlusProvider
+class Copy extends FakeBetterProvider
 {
     /**
      * The path to the copy directory.

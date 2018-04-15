@@ -1,10 +1,10 @@
 <?php
 
-namespace FakerPlus\Providers\Library;
+namespace FakeBetter\Providers\Library;
 
-use FakerPlus\Providers\FakerPlusProvider;
+use FakeBetter\Providers\FakeBetterProvider;
 
-class Colors extends FakerPlusProvider
+class Colors extends FakeBetterProvider
 {
     /**
      * Valid HTML color names.

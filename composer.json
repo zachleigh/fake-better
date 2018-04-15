@@ -1,8 +1,8 @@
 {
-    "name": "zachleigh/faker-plus",
-    "description": "Library of Faker provider, create custom Faker providers, extensive Laravel support.",
+    "name": "zachleigh/fake-better",
+    "description": "Faker provider to use more realistic fake data, extensive Laravel support.",
     "keywords": ["laravel", "faker", "real copy", "faker provider", "custom", "copy", "testing"],
-    "homepage": "https://github.com/zachleigh/faker-plus",
+    "homepage": "https://github.com/zachleigh/fake-better",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -21,12 +21,12 @@
 
     "autoload": {
         "psr-4": {
-            "FakerPlus\\": "src/"
+            "FakeBetter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FakerPlus\\Tests\\": "tests/"
+            "FakeBetter\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "FakerPlus\\ServiceProvider"
+                "FakeBetter\\ServiceProvider"
             ]
         }
     }

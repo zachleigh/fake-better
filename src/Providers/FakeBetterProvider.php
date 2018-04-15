@@ -1,10 +1,10 @@
 <?php
 
-namespace FakerPlus\Providers;
+namespace FakeBetter\Providers;
 
 use Faker\Provider\Base;
 
-abstract class FakerPlusProvider extends Base
+abstract class FakeBetterProvider extends Base
 {
     /**
      * Return the provider description.

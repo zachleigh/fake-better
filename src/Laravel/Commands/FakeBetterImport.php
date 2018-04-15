@@ -1,12 +1,12 @@
 <?php
 
-namespace FakerPlus\Laravel\Commands;
+namespace FakeBetter\Laravel\Commands;
 
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Laravel\Helpers;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class FakerPlusImport extends Command
+class FakeBetterImport extends Command
 {
     /**
      * The name and signature of the console command.

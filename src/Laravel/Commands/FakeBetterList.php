@@ -1,13 +1,13 @@
 <?php
 
-namespace FakerPlus\Laravel\Commands;
+namespace FakeBetter\Laravel\Commands;
 
 use Faker\Generator;
-use FakerPlus\Laravel\Helpers;
+use FakeBetter\Laravel\Helpers;
 use Illuminate\Console\Command;
-use FakerPlus\Providers\FakerPlusProvider;
+use FakeBetter\Providers\FakeBetterProvider;
 
-class FakerPlusList extends Command
+class FakeBetterList extends Command
 {
     /**
      * The name and signature of the console command.
@@ -41,9 +41,9 @@ class FakerPlusList extends Command
 
             $className = $file->getBasename('.php');
 
-            $fullName = 'FakerPlus\\Providers\\Library\\' . $className;
+            $fullName = 'FakeBetter\\Providers\\Library\\' . $className;
 
-            if ($this->isFakerPlusProvider($fullName)) {
+            if ($this->isFakeBetterProvider($fullName)) {
                 $provider = new $fullName($generator);
 
                 $this->info("{$className}: {$provider->getDescription()}");
@@ -52,15 +52,15 @@ class FakerPlusList extends Command
     }
 
     /**
-     * Return true if the given class has the FakerPlusProvider as a parent.
+     * Return true if the given class has the FakeBetterProvider as a parent.
      *
      * @param string $fullName
      * @return boolean
      */
-    protected function isFakerPlusProvider($fullName)
+    protected function isFakeBetterProvider($fullName)
     {
         $reflection = new \ReflectionClass($fullName);
 
-        return $reflection->isSubclassOf(FakerPlusProvider::class);
+        return $reflection->isSubclassOf(FakeBetterProvider::class);
     }
 }

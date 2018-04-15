@@ -1,19 +1,19 @@
 <?php
 
-namespace FakerPlus\Tests\Laravel\Commands;
+namespace FakeBetter\Tests\Laravel\Commands;
 
 use Faker\Generator;
-use FakerPlus\Tests\TestCase;
-use FakerPlus\Providers\Library\Colors;
+use FakeBetter\Tests\TestCase;
+use FakeBetter\Providers\Library\Colors;
 use Illuminate\Support\Facades\Artisan;
 use Symfony\Component\Console\Output\BufferedOutput;
 
-class FakerPlusListTest extends TestCase
+class FakeBetterListTest extends TestCase
 {
     /**
      * @test
      */
-    public function fakerPlusListListsAllProvidersThatCanBeImported()
+    public function FakeBetterListListsAllProvidersThatCanBeImported()
     {
         $output = new BufferedOutput();
 

@@ -29,4 +29,26 @@ class MakeFakerCopyTest extends TestCase
 
         $this->removeFile(Helpers::projectCopyPath());
     }
+
+    /**
+     * @test
+     */
+    public function makeFakerCopyMakesNestedFile()
+    {
+        $path = Helpers::projectCopyPath('look/ma/im/nested.php');
+
+        $this->removeFile($path);
+
+        Artisan::call('make:faker-copy', [
+            'name' => 'look/ma/im/nested',
+        ]);
+
+        $this->assertFileExists($path);
+
+        $contents = file_get_contents($path);
+
+        $this->assertContains('<?php', $contents);
+
+        $this->removeFile(Helpers::projectCopyPath());
+    }
 }

@@ -39,11 +39,30 @@ class MakeFakerCopy extends Command
             return;
         }
 
-        if (!$filesystem->exists(Helpers::projectCopyPath())) {
+        $this->makePathToFile($filesystem);
+;
+        $filesystem->put($fullPath, $this->getStub());
+    }
+
+    /**
+     * Make the full path to the file.
+     *
+     * @param Filesystem $filesystem
+     * @return void
+     */
+    protected function makePathToFile($filesystem)
+    {
+        if (strpos($this->argument('name'), '/') !== false) {
+            $path = explode('/', $this->argument('name'));
+
+            array_pop($path);
+
+            $path = implode('/', $path);
+
+            $filesystem->makeDirectory(Helpers::projectCopyPath($path), 0755, true);
+        } elseif (!$filesystem->exists(Helpers::projectCopyPath())) {
             $filesystem->makeDirectory(Helpers::projectCopyPath(), 0755, true);
         }
-
-        $filesystem->put($fullPath, $this->getStub());
     }
 
     /**

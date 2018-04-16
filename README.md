@@ -57,7 +57,7 @@ php artisan vendor:publish --provider="FakeBetter\Laravel\ServiceProvider" --tag
 
 Create new copy files:
 ```php
-php artisan make:faker-copy
+php artisan make:faker-copy my/original/copy/file
 ```
 
 In addition to the Copy provider, this package also allows you to easily create

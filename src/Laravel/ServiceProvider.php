@@ -43,7 +43,7 @@ class ServiceProvider extends BaseProvider
 
         $this->publishes([
             __DIR__ . '/config.php' => config_path('faker-plus.php'),
-        ]);
+        ], 'config');
     }
 
     /**

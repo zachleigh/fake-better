@@ -20,7 +20,8 @@ Install via composer:
 composer require zachleigh/fake-better
 ```
 
-**If using Laravel, see the [Laravel Support section](#laravel-support).**
+**If using Laravel, see the [Laravel Support section](#laravel-support).**   
+
 Once installed, you need to add the `FakeBetter\Providers\Copy` provider to your
 Faker instance:
 ```php
@@ -37,8 +38,11 @@ $faker->addProvider($copyProvider);
 ```
 
 ## Usage
-In the set copy path, define any file structure you like. All files should return an
-array. To access the copy use the....
+In the set copy path, define any file structure you like. All files must be php files
+and should return an array. To access the copy use the `copy::get` method:
+```php
+$faker->copy->get('path.to.copy');
+```
 
 ## Laravel Support
 If using Laravel, register the service provider:

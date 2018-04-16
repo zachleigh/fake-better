@@ -39,10 +39,13 @@ $faker->addProvider($copyProvider);
 
 ## Usage
 In the set copy path, define any file structure you like. All files must be php files
-and should return an array. To access the copy use the `copy::get` method:
+and should return an array. To access your custom copy, use the `copy` method and
+pass it a dot separated path to your copy:
 ```php
-$faker->copy->get('path.to.copy');
+$faker->copy('path.to.copy');
 ```
+
+If the defined copy is an array, a random value will be returned.
 
 ## Laravel Support
 If using Laravel, register the service provider:

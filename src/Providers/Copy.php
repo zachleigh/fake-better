@@ -127,6 +127,17 @@ class Copy extends FakeBetterProvider
     }
 
     /**
+     * Use this class as a function to call get.
+     *
+     * @param string $path
+     * @return mixed
+     */
+    public function copy($path = '')
+    {
+        return $this->resolveCopy('get', [$path]);
+    }
+
+    /**
      * Magic call.
      *
      * @param string $name
@@ -147,16 +158,5 @@ class Copy extends FakeBetterProvider
     public function __get($name)
     {
         return $this->resolveCopy($name);
-    }
-
-    /**
-     * Use this class as a function to call get.
-     *
-     * @param string $path
-     * @return mixed
-     */
-    public function __invoke($path = '')
-    {
-        return $this->resolveCopy('get', [$path]);
     }
 }

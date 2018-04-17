@@ -33,18 +33,19 @@ class Copy extends FakeBetterProvider
      *
      * @param string $name
      * @param array $arguments
+     * @param boolean $random
      * @return mixed
      */
-    protected function resolveCopy($name, $arguments = [])
+    protected function resolveCopy($name, $arguments = [], $random = true)
     {
         if (empty($this->copyArray)) {
             $this->copyArray = $this->buildCopyArray($this->copyPath);
         }
 
         if ($name === 'get') {
-            return $this->getReturnValue($this->get($arguments));
+            return $this->getReturnValue($this->get($arguments), $random);
         } elseif (isset($this->copyArray[$name])) {
-            return $this->getReturnValue($this->copyArray[$name]);
+            return $this->getReturnValue($this->copyArray[$name], $random);
         }
 
         throw new \Exception("Item {$name} not found.");
@@ -115,11 +116,12 @@ class Copy extends FakeBetterProvider
      * Randomize return value if given value is array. Simply return value otherwise.
      *
      * @param mixed $value
+     * @param boolean $random
      * @return mixed
      */
-    protected function getReturnValue($value)
+    protected function getReturnValue($value, $random)
     {
-        if (is_array($value)) {
+        if (is_array($value) && $random) {
             return $value[array_rand($value)];
         }
         
@@ -127,14 +129,16 @@ class Copy extends FakeBetterProvider
     }
 
     /**
-     * Use this class as a function to call get.
+     * Return the copy specified in the path. If random and return value is array,
+     * return fandom array item.
      *
      * @param string $path
+     * @param boolean $random
      * @return mixed
      */
-    public function copy($path = '')
+    public function copy($path = '', $random = true)
     {
-        return $this->resolveCopy('get', [$path]);
+        return $this->resolveCopy('get', [$path], $random);
     }
 
     /**

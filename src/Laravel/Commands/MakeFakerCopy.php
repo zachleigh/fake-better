@@ -43,7 +43,7 @@ class MakeFakerCopy extends Command
 ;
         $filesystem->put($fullPath, $this->getStub());
     }
-
+    
     /**
      * Make the full path to the file.
      *
@@ -53,13 +53,19 @@ class MakeFakerCopy extends Command
     protected function makePathToFile($filesystem)
     {
         if (strpos($this->argument('name'), '/') !== false) {
+            $sections = '';
+
             $path = explode('/', $this->argument('name'));
 
             array_pop($path);
 
-            $path = implode('/', $path);
+            foreach ($path as $section) {
+                $sections .= '/' . $section;
 
-            $filesystem->makeDirectory(Helpers::projectCopyPath($path), 0755, true);
+                if (!$filesystem->exists(Helpers::projectCopyPath($sections))) {
+                    $filesystem->makeDirectory(Helpers::projectCopyPath($sections), 0755, true);
+                }
+            }
         } elseif (!$filesystem->exists(Helpers::projectCopyPath())) {
             $filesystem->makeDirectory(Helpers::projectCopyPath(), 0755, true);
         }

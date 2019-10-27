@@ -69,7 +69,7 @@ class Copy extends FakeBetterProvider
         $copy = $this->copyArray;
 
         foreach ($pathArray as $key) {
-            if (isset($copy[$key])) {
+            if (array_key_exists($key, $copy)) {
                 $copy = $copy[$key];
             } else {
                 throw new \Exception("Path {$arguments[0]} invalid.");
@@ -124,7 +124,7 @@ class Copy extends FakeBetterProvider
         if (is_array($value) && $random) {
             return $value[array_rand($value)];
         }
-        
+
         return $value;
     }
 
